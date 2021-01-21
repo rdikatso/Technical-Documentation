@@ -1,0 +1,80 @@
+
+nav a {
+    display:block;
+    text-decoration:none;
+}
+
+.main-body{
+    display:grid;
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-areas: "navbar mainContent";
+    grid-gap:1rem;
+    overflow:hidden;
+    
+}
+
+ #navbar{
+     grid-area:navbar;
+     position:fixed;
+ }
+
+ #main-doc{
+     grid-area:mainContent;
+ }
+/*styling*/
+ body{
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+    line-height:1.6;
+    margin:1rem;
+    background-color: #e8f4f8;
+}
+header{
+    font-size:1.6rem;
+    font-weight:bold;
+}
+nav header{
+    font-size:1.2rem;
+    font-weight:900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+}
+nav {
+    padding:20px;
+    background-color:#add8e6;
+}
+nav a {
+    padding: 20px 0;
+    border-bottom: 2px #e8f4f8 solid;
+    color: #000;
+}
+nav a:hover{
+    background-color: #72bcd4;
+    cursor: pointer;
+}
+main{
+    padding:20px;
+}
+code{
+    display:block;
+    width:auto;
+    background-color: #DCDCDC;
+    padding:20px;
+    border-radius: 20px;
+}
+@media screen and (max-width:700px) {
+        .main-body{
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "navbar" "mainContent";
+            overflow:auto;
+        }
+    #navbar{
+        position:inherit;
+    }
+   
+}
+
+
+
